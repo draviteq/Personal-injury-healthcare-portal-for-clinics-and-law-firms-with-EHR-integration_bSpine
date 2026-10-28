@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Activity Log List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap5.min.css">
+
+<div class="d-md-flex d-block align-items-center justify-content-between page-header-breadcrumb">
+    <div>
+        <h2 class="main-content-title fs-24 mb-1">Audit Logs</h2>
+    </div>
+
+</div>
+<div class="row row-sm">
+    <div class="col-xl-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane text-muted active show p-0" id="global" role="tabpanel">
+                        <div class="row">
+                            <div class="col-xl-12">
+
+                                <div class="d-flex justify-content-between align-items-sm-center border-bottom pb-3 gap-3 flex-column flex-sm-row">
+
+
+                                    <div class="d-none" id="divFileterActivityLogs">
+                                        @* <div class="custom-toggle-switch d-flex align-items-center mb-4">
+                                        <input id="toggleswitchInfo" name="toggleswitch001" type="checkbox" checked="">
+                                        <label for="toggleswitchInfo" class="label-info"></label><span class="ms-3">Internal</span>
+                                        </div> *@
+
+
+                                        <div class="form-check form-check-inline me-2 p-0">
+                                            <label class="form-check-label custom-radio" for="flexRadioDefault1">
+                                                <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked hidden>
+                                                <span class="radio-label-span"><i class="bi bi-check2"></i> Global</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline p-0 m-0">
+                                            <label class="form-check-label custom-radio" for="flexRadioDefault2">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" hidden>
+                                                <span class="radio-label-span"><i class="bi bi-check2"></i> Internal</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- Dropdown for export options -->
+                                    <div id="exportDropdown" class="">
+                                        <button class="btn btn-outline-light btn-wave waves-effect waves-light me-2" id="exportExcel"><i class="bi bi-upload me-2"></i> Export to Excel</button>
+                                        <button class="btn btn-outline-light btn-wave waves-effect waves-light" id="exportPDF"><i class="bi bi-upload me-2"></i> Export to PDF</button>
+                                    </div>
+                                </div>
+                                <div class="table-responsive mg-t-10 pt-2">
+                                    <table id="activityLogDatatable" class="table card-table table-vcenter text-nowrap mb-0" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Created By</th>                                                                                                
+                                                <th>User Name</th>
+                                                <th>User Role</th>
+                                                <th>Activity</th>
+                                                <th>Changes</th>
+                                                <th>Time Stamp</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/assets/js/jquery.min.js"></script>
+    @{
+        await Html.RenderPartialAsync("_DataTableJS");
+    }
+}
+<script src="~/js/audit_log/audit_logs.js"></script>
+
+

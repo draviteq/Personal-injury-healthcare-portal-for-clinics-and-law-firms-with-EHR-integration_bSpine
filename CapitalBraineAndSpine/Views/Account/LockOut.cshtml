@@ -1,0 +1,49 @@
+﻿@using Microsoft.Extensions.Configuration;
+@inject IConfiguration Configuration;
+@{
+    ViewData["Title"] = "Lockout";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
+}
+
+<!-- loader starts-->
+<div class="loader-wrapper">
+    <div class="loader-index"> <span></span></div>
+    <svg>
+        <defs></defs>
+        <filter id="goo">
+            <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
+            <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
+        </filter>
+    </svg>
+</div>
+<!-- loader ends-->
+<!-- tap on top starts-->
+<div class="tap-top"><i data-feather="chevrons-up"></i></div>
+<!-- tap on tap ends-->
+<!-- page-wrapper Start-->
+<div class="page-wrapper">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="login-card login-dark">
+                    <div>
+                        <div>
+                            <a class="logo" href="@Configuration["WebsiteUrl:url"]">
+                                <img class="img-fluid for-light" src="/assets/images/logo/Logo-C-B.png" alt="looginpage">
+                                <img class="img-fluid for-dark" src="/assets/images/logo/Logo-C-B.png" alt="looginpage">
+                            </a>
+                        </div>
+                        <div class="login-main">
+                            <h5 class="text-start mb-2">Your account has been locked!</h5>
+                            <p class="mb-4 text-muted tx-13 ms-0 text-start">Please try again after 10 minutes.</p>
+                            <div class="text-start mt-5 ms-0">
+                                <p class="mb-0"><a href="@Url.Action("Login")" class="btn btn-primary btn-block w-100">Sign In</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

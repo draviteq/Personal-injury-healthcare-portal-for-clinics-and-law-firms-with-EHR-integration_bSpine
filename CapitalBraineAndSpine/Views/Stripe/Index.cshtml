@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div>
+    <button id="checkout-button">Checkout</button>
+</div>
+
+
+
+<script src="~/js/stripe/create_customer.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+
+
+<script>
+    const stripe = Stripe("pk_test_51QaVyRFwAHfKhpF0Ey3zJlZoIU7nSrX0DAjG7UAV9kY8lehzTrOMfqaQNCWQjkR01Ki0CR6srOIOmqSPhieGaqBI00gMEPFrVY");
+
+    document.getElementById("checkout-button").addEventListener("click", async () => {
+        const response = await fetch("/api/stripe/create-session", { method: "POST" });
+        const { sessionId } = await response.json();
+
+        const { error } = await stripe.redirectToCheckout({ sessionId });
+        if (error) {
+            console.error(error.message);
+        }
+    });
+</script>

@@ -1,0 +1,531 @@
+﻿:root {
+    /*--body-bg-rgb: 244,247,251;*/
+    --primary-rgb: 0, 188, 212;
+    --secondary-rgb: 241,56,139;
+}
+
+body {
+    background: transparent;
+}
+
+.main-content {
+    background: #f4f7fb;
+    border-top-left-radius: 30px;
+}
+
+#myOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    /*background: rgb(255 255 255 / 82%);*/
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.loader {
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    /*    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;*/
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.input-validation-error {
+    background-image: url('/profile_document/super_admin/red.svg') !important;
+    border-color: red !important;
+    background-repeat: no-repeat;
+    padding-right: calc(1.5em + .75rem);
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.valid {
+    background-image: url('/profile_document/super_admin/green.svg') !important;
+    border-color: green !important;
+    background-repeat: no-repeat;
+    padding-right: calc(1.5em + .75rem);
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.cursorPointer {
+    cursor: pointer
+}
+
+.button-container {
+    float: right;
+}
+
+/* Initially hide the button container */
+.button-container {
+    display: none;
+}
+
+/* Optionally, you can hide the pagination by default as well */
+.dataTables_paginate {
+    display: none;
+}
+
+.dataTables_info {
+    display: none;
+}
+
+.dataTables_length {
+    display: none;
+}
+
+.dataTables_filter {
+    display: none;
+}
+
+font-bold {
+    position: relative;
+    margin-block-end: 0;
+    font-size: .875rem;
+    font-weight: 800;
+    text-transform: uppercase
+}
+
+.chkToggle {
+    border: 1px solid blue !important;
+    width: 16px;
+    height: 16px;
+}
+/*@media (min-width:1034px) and (max-width:1380px) {
+    .card-stats .custom-card p {
+        min-height: 67px;
+    }
+}
+@media (min-width:1200px) and (max-width:1380px) {
+    .card-stats .custom-card p
+
+{
+    min-height: 67px;
+}
+    
+}
+@media (min-width:1381px) and (max-width:2000px) {
+    .card-stats .custom-card p {
+        min-height: 53px;
+    }
+}*/
+.dt-button {
+    font-size: .8125rem !important;
+    border-radius: .3rem !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+    padding: 8px .75rem !important;
+    background-color: transparent;
+    color: #0c0c0c;
+    border: 1px solid #c1c1c1;
+    line-height: normal;
+}
+
+    .dt-button:hover {
+        background: #6259ca !important;
+        color: #fff;
+        border-color: #6259ca !important;
+    }
+
+.card-height .card-body {
+    height: 320px;
+    overflow-y: scroll;
+}
+
+.header-navheading {
+    text-align: left;
+}
+
+.main-header-dropdown .main-notification-text {
+    color: gray;
+}
+
+.main-header-dropdown h6.main-notification-title {
+    font-size: 16px !IMPORTANT;
+}
+
+.card.custom-card:hover {
+    background: #ffffff !important;
+    transform: translateY(-5px);
+}
+
+.custom-card {
+    transition: 0.2s all ease-in-out;
+}
+
+[data-theme-mode="dark"] .dt-button {
+    padding: 8px .75rem !important;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #c1c1c1;
+    line-height: normal;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.table th {
+    padding: 15px 14px;
+    background: #f4f7fb;
+}
+
+.table td {
+    padding: 22px 14px;
+}
+
+.patient-details .profile-cover__img {
+    inset-inline-start: 0 !important;
+    inset-block-start: 0 !important;
+    text-align: left;
+}
+
+.user-inage {
+    border: 1px solid #e7e7e7;
+}
+
+.patient-details .profile-cover__img > img {
+    max-width: 60px;
+}
+
+.disabled-link {
+    pointer-events: none;
+}
+
+[data-theme-mode="dark"] .card-stats .custom-card:hover {
+    background: #141430 !important;
+    box-shadow: 0 0 84px #80808029;
+}
+
+a.nav-link {
+    cursor: pointer;
+}
+
+
+table.dataTable th,
+table.dataTable td {
+    white-space: normal !important; /* Allow text wrapping */
+    word-wrap: break-word !important; /* Break long words */
+}
+
+
+#transactionDataTable th:nth-child(3),
+#transactionDataTable td:nth-child(3) {
+    width: 100px;
+}
+
+#transactionDataTable {
+    table-layout: fixed;
+}
+/*table thead th {
+    background: #eaedf7 !IMPORTANT;
+}*/
+[data-theme-mode="dark"] table thead th {
+    background: #252538 !IMPORTANT;
+}
+
+table.dataTable th, table.dataTable td {
+    white-space: nowrap !important;
+    word-wrap: break-word;
+}
+
+.amount::before {
+    content: '$';
+    margin-right: 2px; /* Optional: adds some space between the dollar sign and the amount */
+}
+
+th {
+    text-align: left !important;
+}
+
+.download-pdf-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.permission-list .wrap-permission {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style the label */
+.radio-label-span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 20px;
+    border-radius: 99px;
+    background-color: #f4f7fb; /* Default background color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color when the radio input is selected */
+.custom-radio input[type="radio"]:checked + .radio-label-span {
+    background-color: #00bcd4; /* Selected background color */
+    color: white; /* Optional: change text color */
+}
+
+.custom-radio .radio-label-span i {
+    display: none;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-label-span i {
+    display: block;
+}
+
+.app-sidebar .side-menu__icon.double-shade-icon {
+    margin-inline-end: .6rem;
+    width: auto;
+    height: auto;
+}
+
+.login--page {
+    border-radius: 30px !important;
+    background-color: #fffffff !important;
+    backdrop-filter: blur(130px);
+}
+
+.table tbody tr td:nth-child(2n) a:hover, .table tbody tr td i:hover {
+    color: #00bcd4 !important;
+}
+
+.login--bg video {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: left;
+}
+
+    .login--bg video source {
+    }
+
+.login--bg img {
+    z-index: 999;
+    position: relative;
+}
+
+.hover-text:hover {
+    color: #00bcd4 !important;
+    transition: all .3s ease;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: .5em !important;
+    display: inline-block !important;
+    width: auto;
+}
+
+.dataTables_length {
+    text-align: left !important;
+}
+
+.dataTables_wrapper {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .dataTables_filter {
+        margin-bottom: 20px;
+    }
+
+    .dataTables_length {
+        margin-bottom: -32px;
+    }
+
+    .button-container {
+        position: absolute;
+        right: 250px;
+        top: -5px;
+    }
+
+    .dataTables_info {
+        margin-bottom: -28px;
+        margin-top: 20px;
+    }
+
+    .button-container .dt-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card .dataTables_wrapper .dataTables_filter {
+        margin: 1.2rem 0;
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    a.header-logo {
+        width: 65px;
+        display: inline-block;
+    }
+}
+
+/*@media (min-width: 1200px) {
+    .main-content .container-fluid {
+        max-width: 1200px;
+    }
+}*/
+
+
+.card.custom-card.db-data-cards .card.custom-card {
+    border: 1px solid transparent;
+}
+
+    .card.custom-card.db-data-cards .card.custom-card:hover {
+        transform: inherit !important;
+        border: 1px solid;
+        transition: all .3s ease;
+    }
+
+.card.custom-card.db-data-cards:hover {
+    transform: inherit !important;
+}
+/*.app-sidebar .side-menu__label {
+    font-size: 13px;
+}*/
+.app-sidebar .side-menu__item:hover span.side-menu__label, .app-sidebar .side-menu__item:hover .side-menu__icon.double-shade-icon {
+    color: #00bcd4;
+}
+
+img.card-bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .3;
+    transform: rotateY(180deg);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.text-primary-dark {
+    color: #297781;
+}
+
+.text-success-dark {
+    color: #811a48;
+}
+
+.text-warning-dark {
+    color: #a76c24;
+}
+
+.text-success-dark {
+    color: #126736;
+}
+
+.text-secondary-dark {
+    color: #973764;
+}
+
+.tab-style-2 .nav-item .nav-link i.dbl-shade-icon-i {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu__icon.double-shade-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Dark Mode*/
+html[data-theme-mode=light] table td:nth-child(2n) a {
+    color: rgba(0, 0, 0, .8);
+    font-weight: 500;
+}
+
+html[data-theme-mode=light] table td {
+    color: rgba(115, 117, 118, 1);
+    font-weight: 300;
+}
+
+html[data-theme-mode=dark] img.card-bg-img {
+    opacity: .05;
+}
+
+html[data-theme-mode=dark] .card.custom-card:hover {
+    background: #0e0f23 !important;
+}
+
+html[data-theme-mode=dark] .main-content {
+    background: #252538;
+}
+
+html[data-theme-mode=dark] body {
+    background: rgba(14,14,35);
+}
+
+html[data-toggled="icon-overlay-close"] .main-sidebar {
+    margin-top: 2rem !important;
+}
+
+html[data-theme-mode=dark] .radio-label-span {
+    background-color: #3e3e5a;
+}
+
+html[data-theme-mode=dark] .table th {
+    background: #252538;
+}
+
+.checkBorder {
+    border: 1px solid #00BCD4 !important;
+}

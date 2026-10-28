@@ -1,0 +1,82 @@
+﻿@model HealthCare.Services.ViewModels.ProfileViewModel.MyProfileViewModel;
+
+<div class="d-md-flex d-block align-items-center justify-content-between page-header-breadcrumb">
+    <div>
+        <h2 class="main-content-title fs-24 mb-1">My Profile</h2>
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Profile</li>
+        </ol>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="card custom-card">
+        <div class="card-body">
+            <form id="formMyProfile" enctype="multipart/form-data" method="post">
+                <div class="d-flex align-items-start pb-3 border-bottom">
+                    <img id="imgProfile" class="img rounded-circle avatar-xl" alt="">
+                    <div class="ps-sm-4 ps-2" id="img-section">
+                        <b>Profile Photo</b>
+                        <p class="mb-1">Accepted file only png ,jpg and jpeg</p> <input asp-for="ProfilePhoto" id="PhotoFile" type="file" class="custom-file-input curser" accept="image/*" hidden />
+                        <button class="btn button border btn-sm"><b>Upload</b></button>
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-medium" for="FirstName">First Name</label>
+                            <input type="text" asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-medium" for="LastName">Last Name</label>
+                            <input type="text" asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        @* <div class="col-md-6">
+                        <label class="form-label fw-medium" for="Address"> Address</label>
+                        <input type="text" asp-for="Address" class="form-control" placeholder="Enter Address">
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                        </div> *@
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-medium" for="RoleName"> Role</label>
+                            <input type="text" asp-for="RoleName" disabled class="form-control"/>
+
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-medium" for="PhoneNumber">Phone Number</label>
+                            <input type="tel" pattern="\d{10}" asp-for="PhoneNumber" max="15" class="form-control" placeholder="Enter Phone Number">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3 d-flex align-items-end">
+                            <!-- Flexbox utilities for alignment -->
+                            <div class="w-100">
+                                <!-- Full width input inside flexbox item -->
+                                <label class="form-label fw-medium" for="Email">Email</label>
+                                <input type="email" asp-for="Email" class="form-control" disabled placeholder="Enter Email">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mt-2 d-flex align-items-end">
+                            <!-- Flexbox utilities for alignment -->
+                            <button type="submit" class="btn btn-primary btn-wave waves-effect waves-light rounded"
+                                    title="Update your changes" id="btnSubmit">
+                                Update
+                            </button>
+                        </div>
+                    </div>
+                    <input type="hidden" asp-for="Id" id="Id" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

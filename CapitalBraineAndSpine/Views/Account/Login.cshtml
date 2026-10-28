@@ -1,0 +1,80 @@
+﻿@using Microsoft.Extensions.Configuration;
+@using HealthCare.Services.ViewModels.AccountViewModels;
+@inject IConfiguration Configuration;
+@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
+}
+
+
+
+<div class="col-12 col-md-8 col-lg-6 col-xxl-5">
+    <div class=" mb-0">
+        <div class="row row-sm align-items-center justify-content-end">
+                @* <div class="col-lg-6 col-xl-5 d-none d-lg-block text-center bg-primary details">
+                    <div class="mt-4 pt-5 p-2 position-absolute">
+                        <div class="clearfix"></div>
+                        <img src="~/assets/images/brand-logos/logo.png" class="ht-100 mb-0" alt="user">
+                        <h5 class="mt-4">Login into your Account</h5>
+                        <span class="text-white-6 fs-13 mb-5 mt-xl-0">
+                            Signin to access Patient details: Your Healthcare Records, Our Priority.
+                        </span>
+                    </div>
+                </div> *@
+
+          
+            <div class=" col-12 ">
+                <img src="~/assets/images/brand-logos/logo.png" class="img-fluid mb-5" alt="user">
+                <div class="card login--page shadow ">
+                    <div class="card-body p-5 ">
+
+                        <div class="clearfix"></div>
+                        <form asp-controller="Account" asp-action="Login" id="loginform">
+                            <h3 class=" mb-2 text-center">Sign in with email</h3>
+
+                            <p class="mb-4 text-muted fs-13 ms-0 text-center lead">Revolutionizing Health, One Step at a Time.</p>
+                            <h6><div asp-validation-summary="ModelOnly" class="text-danger text-start"></div></h6>
+                            <div class="form-group text-start">
+                                <label class="form-label">Email</label>
+                                <input asp-for="Email" value="svinay@teqmavens.com" class="form-control" placeholder="Enter your email" required="">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group text-start mb-0">
+                                <label class="form-label">Password</label>
+                                <input asp-for="Password" class="form-control" value="Admin@123456" placeholder="Enter your password">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="text-start ms-0">
+                                <div class="mb-4 mt-1 text-end"><a href="@Url.Action("Forgot")" class="text-black hover-text">Forgot password?</a></div>
+                            </div>
+                            <div class="d-grid">
+                                <input type="hidden" name="ReturnUrl" value="@ViewData["ReturnUrl"]" />
+                                <button type="submit" id="btnLogin" class="btn btn-primary  rounded  defaultbutton">Sign In</button>
+
+                            </div>
+                            <div class="d-grid mt-4">
+                                <a href="/account/loginwithemail" class="text-decoration-underline text-dark hover-text">Login through OTP?</a>
+                            </div>
+
+                        </form>
+                      
+                    </div>
+                       </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        <!-- latest jquery-->
+        <script src="~/assets/js/jquery.min.js"></script>
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/js/default_validation.js"></script>
+
+    }
+}
+

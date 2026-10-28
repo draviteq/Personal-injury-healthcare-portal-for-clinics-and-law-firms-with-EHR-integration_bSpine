@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CapitalBraineAndSpine.Web
+build_property.RootNamespace = CapitalBraineAndSpine.Web
+build_property.ProjectDir = C:\Demo\CapitalBraineAndSpine\CapitalBraineAndSpine\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Demo\CapitalBraineAndSpine\CapitalBraineAndSpine
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/Forgot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/LockOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2NrT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/LoginWithEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbldpdGhFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/UnderConstruction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVbmRlckNvbnN0cnVjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Account/ValidateOtp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWYWxpZGF0ZU90cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/AuditLog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaXRMb2dcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/DataRequest/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVJlcXVlc3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/LawFirm/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF3RmlybVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/LawFirm/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF3RmlybVxNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/LawFirm/ManagePermissions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF3RmlybVxNYW5hZ2VQZXJtaXNzaW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Profile/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Profile/MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxNeVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Settings/GeneralSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ3NcR2VuZXJhbFNldHRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/Components/MenuAttorneyVC/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudUF0dG9ybmV5VkNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/Components/MenuCBSStaffVC/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudUNCU1N0YWZmVkNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/Components/MenuLawFirmVC/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudUxhd0Zpcm1WQ1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_DataTableJS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EYXRhVGFibGVKUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_LayoutAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRoZW50aWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_LeftMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0TWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_LeftMenuAttorney.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0TWVudUF0dG9ybmV5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_LeftMenuLawFirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0TWVudUxhd0Zpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Stripe/Cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaXBlXENhbmNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Stripe/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaXBlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Stripe/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaXBlXFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Demo/CapitalBraineAndSpine/CapitalBraineAndSpine/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-10z42tm2zc

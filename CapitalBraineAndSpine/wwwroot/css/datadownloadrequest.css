@@ -1,0 +1,16 @@
+﻿#rejectTextArea {
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+    #rejecttextarea:focus {
+        outline: none;
+        border-color: #007bff;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }

@@ -1,0 +1,93 @@
+﻿@model HealthCare.Services.ViewModels.SettingViewModels.GeneralSettingsViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="d-md-flex d-block align-items-center justify-content-between page-header-breadcrumb">
+    <div>
+        <h2 class="main-content-title fs-24 mb-1">General Settings</h2>
+       
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">General Settings</li>
+        </ol>
+    </div>
+</div>
+<div class="row row-sm">
+    <div class="col-xl-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <nav class="nav nav-style-1 nav-pills mb-3" role="tablist">
+                    <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#transaction-fees"
+                       data-bs-custom-class="tooltip-primary" data-bs-placement="top" title="Transaction Fees" aria-selected="true"> Transaction Fees</a>
+                    <a class="nav-link" data-bs-toggle="tab" role="tab" href="#cms-management" aria-selected="false"
+                       data-bs-custom-class="tooltip-primary" data-bs-placement="top" title="CMS Management" tabindex="-1">CMS Management</a>
+                    
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane text-muted active show" id="transaction-fees" role="tabpanel">
+                        <form id="GeneralSettings" method="post">
+                            <div class="container-fluid ">
+                                <div class="col-xl-6 col-lg-8 col-md-10">
+
+                                    <div class="card custom-card">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-12">
+                                                    <div class="row align-items-center mb-3">
+
+                                                        <div class="col-auto">
+                                                            <div class="settings-main-icon me-3">
+                                                                <div class="avatar avatar-md bg-primary-transparent text-primary">
+                                                                    <i class="ti-settings fs-18"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Header text -->
+                                                        <div class="col">
+                                                            <h5 class="fs-14 text-dark text-uppercase mb-0">Set Price ($) for downloading per patient record</h5>
+                                                        </div>
+                                                        <!-- Input field -->
+                                                        <div class="col-auto">
+                                                            <input id="settingValue" asp-for="SettingValue" class="form-control" type="text" disabled />
+                                                            <span asp-validation-for="SettingValue" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer rounded-0 d-flex justify-content-end">
+
+                                            <input id="ChangeButton" type="button" value="Change" class="btn btn-primary me-2"
+                                                   data-bs-toggle="tooltip"
+                                                   data-bs-custom-class="tooltip-primary" data-bs-placement="top" title="Change price" />
+                                            <input id="SaveButton" type="submit" value="Save"
+                                                   class="btn btn-primary" data-bs-toggle="tooltip"
+                                                   data-bs-custom-class="tooltip-primary" data-bs-placement="top" title="Update your changes" hidden />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="SettingType" />
+                        </form>
+                    </div>
+                    <div class="tab-pane text-muted" id="cms-management" role="tabpanel">
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/js/super_admin/general_settings.js"></script>
+}
+

@@ -1,0 +1,128 @@
+﻿@using Microsoft.Extensions.Configuration;
+@using HealthCare.Services.ViewModels.AccountViewModels;
+@inject IConfiguration Configuration;
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
+}
+<div class="container-fluid p-0">
+    <div class="row m-0">
+        <div class="col-12 p-0">
+            <div class="login-card login-dark">
+                <div>
+                    <div><a class="logo" href="@Configuration["WebsiteUrl:url"]"><img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt="looginpage"><img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+                    <div class="login-main">
+                        <h6><div asp-validation-summary="ModelOnly" class="text-danger"></div></h6>
+                        <form class="theme-form" asp-action="Register" asp-route-type="@ViewData["type"]">
+                            <h4>Create your account</h4>
+                            <p>Enter your personal details to create account</p>
+                            <div class="form-group">
+                                <label class="col-form-label pt-0">Your Name</label>
+                                <div class="row g-2 form-input position-relative">
+                                    <div class="col-6">
+                                        <input asp-for="FirstName" class="form-control" placeholder="First Name">
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-6 form-input position-relative">
+                                        <input asp-for="LastName" class="form-control" placeholder="Last Name">
+                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-input position-relative">
+                                <input asp-for="Email" class="form-control" placeholder="Enter your email">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">Password</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="Password" class="form-control" placeholder="Enter your password">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">Confirm Password</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Re-Enter your password">
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">Phone Number</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="PhoneNumber" class="form-control" placeholder="Enter your phone number">
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">Address</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="Address" class="form-control" placeholder="Enter address">
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">City</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="City" class="form-control" placeholder="Enter city">
+                                    <span asp-validation-for="City" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">State</label>
+                                <div class="form-input position-relative">
+                                    <select asp-for="State" id="State" class="custom-form-control form-select mt-2">
+                                        <option value="">--Select State--</option>
+                                        @foreach (var item in Model.StateList)
+                                        {
+                                            if (item.Code == @Model.State)
+                                            {
+                                                <option value="@item.Code" selected>@item.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.Code">@item.Name</option>
+                                            }
+
+                                        }
+                                    </select>
+                                    <span asp-validation-for="State" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label">State</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="Zip" class="form-control" placeholder="Enter zip">
+                                    <span asp-validation-for="Zip" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">Law Firm Name</label>
+                                <div class="form-input position-relative">
+                                    <input asp-for="LawFirmName" class="form-control" placeholder="Enter Law Firm Name">
+                                    <span asp-validation-for="LawFirmName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-input position-relative">
+                                <input type="hidden" asp-route-type="@Context.Request.Query["type"]" />
+                                <button class="btn btn-primary btn-block w-100">Create Account</button>
+                            </div>
+                            <p class="mt-4 mb-0">Already have an account?<a class="ms-2" href="@Url.Action("Login")">Sign in</a></p>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

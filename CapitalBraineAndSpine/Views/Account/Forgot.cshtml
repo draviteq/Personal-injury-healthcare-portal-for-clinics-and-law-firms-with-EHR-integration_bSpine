@@ -1,0 +1,54 @@
+﻿@model ForgotPasswordViewModel
+@{
+    ViewData["Title"] = "Forgot Password";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
+}
+
+@using HealthCare.Services.ViewModels.AccountViewModels;
+@using Microsoft.Extensions.Configuration;
+@inject IConfiguration Configuration;
+
+
+
+<div class="col-12 col-md-8 col-lg-6 col-xxl-5">
+    <div class="m-0">
+        <div class="row row-sm align-items-center justify-content-end">
+      
+            <div class="col-12">
+                <img src="~/assets/images/brand-logos/logo.png" class="img-fluid mb-5" alt="user">
+                     <div class="card login_form shadow login--page">
+                        <div class="card-body">
+                            <div class="clearfix"></div>
+                            <h3 class=" mb-2 text-center">Forgot Password</h3>
+                            <p class="mb-4 text-muted fs-13 ms-0 text-center lead">It's free to signup and only takes a minute.</p>
+                            <form asp-action="Forgot">
+                                <div class="form-group text-start">
+                                    <label class="form-label">Email</label>
+                                    <input asp-for="Email" class="form-control" placeholder="Enter your email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary">Request reset link</button>
+                                </div>
+                            </form>
+                            <div class="card-footer border-top-0 ps-0 mt-3 text-start ">
+                                <p class="fs-14">Did you remembered your password?</p>
+                                <p class="mb-0 fs-14">Try to <a href="@Url.Action("Login")">Signin</a></p>
+                            </div>
+                        </div>
+                     </div>
+                  
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script src="~/assets/js/jquery.min.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

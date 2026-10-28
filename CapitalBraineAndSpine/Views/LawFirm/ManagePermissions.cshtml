@@ -1,0 +1,52 @@
+﻿@model HealthCare.Services.ViewModels.LawFirmViewModels.RolePermissionViewModel
+@{
+    ViewData["Title"] = "ManagePermissions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Manage Roles and Permissions</h1>
+@using (Html.BeginForm("UpdatePermissions", "LawFirm", FormMethod.Post))
+{
+
+    <div>
+        <div id="permissions">
+            <table class="table table-bordered">
+
+                <thead>
+                    <tr>
+                        <th>Permission Name</th>
+                        <th> Role Name</th>
+                        <th>
+                            <label>Status</label>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.RolePermissions.Count(); i++)
+                    {
+                        <tr>
+                            <td>@Model.RolePermissions[i].PermissionName </td>
+                            <td>@Model.RolePermissions[i].RoleName</td>
+                            <td>
+                                @Html.HiddenFor(model => Model.RolePermissions[i].RoleId)
+                                @Html.HiddenFor(model => Model.RolePermissions[i].PermissionId)
+                                @Html.HiddenFor(model => Model.RolePermissions[i].RoleName)
+                                @Html.HiddenFor(model => Model.RolePermissions[i].PermissionName)
+                                @Html.CheckBoxFor(model => Model.RolePermissions[i].IsSelected, new { @checked = Model.RolePermissions[i].IsSelected?"checked":"" })
+                            <td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div><br />
+    <input type="submit" value="Update Permissions" class="btn btn-primary" />
+    
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_DataTableJS");
+    }
+}

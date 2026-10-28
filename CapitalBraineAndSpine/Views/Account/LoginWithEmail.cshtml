@@ -1,0 +1,56 @@
+﻿@using HealthCare.Services.ViewModels.AccountViewModels;
+@model LoginEmailViewModel
+@{
+    ViewData["Title"] = "Login via Email";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
+}
+
+@using Microsoft.Extensions.Configuration;
+@inject IConfiguration Configuration;
+
+
+<div class="col-12 col-md-8 col-lg-6 col-xxl-5">
+    <div class="m-0">
+        <div class="row row-sm align-items-center justify-content-end">
+          
+            <div class="col-12 login_form">
+                <img src="~/assets/images/brand-logos/logo.png" class="img-fluid mb-5" alt="user">
+                <div class="card login_form shadow login--page">
+                        <div class="card-body">
+                            <div class="clearfix"></div>
+                    <h3 class=" mb-2 text-center">Login through OTP</h3>
+                    <p class="mb-4 text-muted fs-13 ms-0 text-center lead">Signup to create, discover and connect with the global community</p>
+                            <form asp-action="LoginWithEmail">
+                                
+                                <h6><div asp-validation-summary="ModelOnly" class="text-danger text-start"></div></h6>
+                                
+                                <div class="form-group text-start">
+                                    <label class="form-label">Email</label>
+                                    <input asp-for="Email" class="form-control" placeholder="Enter your email" required="">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>                                
+                                <div class="d-grid">
+                                    <input type="hidden" asp-route-returnurl="@Context.Request.Query["ReturnUrl"]" />
+                                    <button type="submit" class="btn btn-primary defaultbutton">Submit</button>
+                                </div>
+                            </form>
+                            <div class="text-start mt-2 ms-0">
+                                <div class="mb-1"><a href="@Url.Action("Forgot")" class="text-black hover-text">Forgot password?</a></div>
+                            </div>
+                        </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/assets/js/jquery.min.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/js/default_validation.js"></script>
+    }
+}

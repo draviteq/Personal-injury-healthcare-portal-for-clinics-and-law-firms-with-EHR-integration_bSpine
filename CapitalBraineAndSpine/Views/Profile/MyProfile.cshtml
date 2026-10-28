@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "My Profile";
+}
+
+<div class="row row-sm">
+@await Html.PartialAsync("~/views/shared/_MyProfile.cshtml") 
+</div>
+@section Scripts {
+   
+    <script asp-append-version="true" src="~/js/my_profile.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");        
+    }
+    <script src="~/js/default_validation.js"></script>
+ }

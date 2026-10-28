@@ -1,0 +1,108 @@
+﻿@using Microsoft.Extensions.Configuration;
+@using HealthCare.Services.ViewModels.AccountViewModels;
+
+@inject IConfiguration Configuration;
+@model LoginEmailViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutAuthentication.cshtml";
+}
+
+<style>
+    /* style.css */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .input {
+        width: 40px;
+        border: none;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+        margin: 0 10px;
+        text-align: center;
+        font-size: 30px;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+        .input:focus {
+            border-bottom: 3px solid orange;
+            outline: none;
+        }
+
+        .input:nth-child(1) {
+            cursor: pointer;
+            pointer-events: all;
+        }
+</style>
+
+
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="row row-sm">
+            <div class="col-lg-6 col-xl-6 d-none d-lg-block text-center bg-primary details">
+                <div class="mt-4 pt-5 p-2 position-absolute">
+                    <div class="clearfix"></div>
+                    <img src="~/assets/images/brand-logos/logo.png" class="ht-100 mb-0" alt="user">
+                    <h5 class="mt-4">Login through OTP</h5>
+                    <span class="text-white-6 fs-13 mb-5 mt-xl-0">Signup to create, discover and connect with the global community</span>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 col-xs-12 col-sm-12 login_form ">
+                <div class="main-container container-fluid">
+                    <div class="row row-sm">
+                        <div class="card-body mt-2 mb-2 otp_form">
+                            <div class="clearfix"></div>
+                            <input type="hidden" value="@Model.UserId" id="hdnuserId" />
+                            <div class="mt-4 mb-4"><span class="reset-password-link" id="divResendOTP">If don't receive OTP?  <a class="text-danger" id="ancResendOtp" href="javascript:void(0);">Resend</a></span></div>
+
+                            <h5 class="text-start mb-2">Enter OTP</h5>
+                            
+                            <div class="form-group">                            
+                                <div id="inputs" class="inputs row">
+                                    <input class="input code-input firstInput" type="text" inputmode="numeric" maxlength="1" />
+                                    <input class="input code-input" type="text" inputmode="numeric" maxlength="1" />
+                                    <input class="input code-input" type="text" inputmode="numeric" maxlength="1" />
+                                    <input class="input code-input" type="text" inputmode="numeric" maxlength="1" />
+                                    <input class="input code-input" type="text" inputmode="numeric" maxlength="1" />
+                                    <input class="input code-input" type="text" inputmode="numeric" maxlength="1" />
+                                </div>
+                                <div id="otp-expiration" class="mt-2"></div>
+                                <span id="spnOTPValidate" class="text-danger is-invalid sey-char-highlight m-t-10" style="display:none;">Please enter otp</span>
+
+
+                            </div>
+                            <div class="form-group mb-0">
+                                <button type="submit" id="btnValidateOtp" class="btn btn-primary btn-block w-100 defaultbutton" onclick="ValidateOTP"> Validate OTP</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <!-- Jquery js-->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/js/url.min.js" asp-append-version="true"></script>
+    <script src="~/js/login_verification_code.js" asp-append-version="true"></script>
+    <script src="~/assets/js/sweet-alert/sweetalert.min.js"></script>
+    <script>
+        // script.js
+        
+    </script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/js/default_validation.js"></script>
+    }
+}
